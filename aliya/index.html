@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Boyfriend</title>
+	<style>
+		body {
+			background-color: pink;
+			font-family: Arial, sans-serif;
+		}
+		h1 {
+			text-align: center;
+			font-size: 400x;
+			margin-top: 50px;
+		}
+		p {
+			text-align: center;
+			font-size: 45px;
+			margin-top: 30px;
+		}
+		.heart {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 100px;
+			height: 90px;
+			background-color: red;
+			border-radius: 50px 50px 0 0;
+			transform-origin: 50% 0%;
+			animation: heartbeat 1s ease-in-out infinite;
+		}
+		.heart::before,
+		.heart::after {
+			content: "";
+			position: absolute;
+			background-color: red;
+			border-radius: 50px 50px 0 0;
+		}
+		.heart::before {
+			width: 100px;
+			height: 100px;
+			top: -50px;
+			left: 0;
+		}
+		.heart::after {
+			width: 100px;
+			height: 100px;
+			top: 0;
+			left: 50px;
+		}
+		@keyframes heartbeat {
+			0% {
+				transform: scale(1);
+			}
+			50% {
+				transform: scale(1.2);
+			}
+			100% {
+				transform: scale(1);
+			}
+		}
+	</style>
+</head>
+<body>
+	<h1> Aliya</h1>
+	<div class="heart"></div>
+	<p>You are the love of my life.</p>
+</body>
+</html>
